@@ -3,27 +3,7 @@ import avatar2 from "@/assets/images/user2.jpg";
 
 import {
     MonitorDot,
-    PictureInPicture2,
-    MessagesSquare,
-    Mail,
-    CalendarDays,
-    ShoppingBag,
-    CircuitBoard,
-    ScrollText,
-    RadioTower,
-    FileText,
-    User2,
-    Award,
-    Codesandbox,
-    LifeBuoy,
-    PackagePlus,
-    LocateFixed,
-    Table,
-    PieChart,
-    Trophy,
-    Map,
     Server,
-    ServerCog,
     UserCog
   } from "lucide-vue-next";
 
@@ -39,14 +19,8 @@ import {
       icon: UserCog,
       subMenu: [
         { path: "/user-management/users", title: "Users" },
+        // { path: "/user-management/roles", title: "Roles" },
       ]
-    },
-
-    { isHeader: true, title: "Products" },
-    {
-      icon: Server,
-      title: "servers",
-      path: '/servers'
     },
 
 

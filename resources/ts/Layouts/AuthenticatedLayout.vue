@@ -1,36 +1,36 @@
-<script setup lang="ts">
-import Layout from "@/Components/Layouts/Index.vue";
-import { computed, onMounted } from "vue";
+<script lang="ts" setup>
+    import Layout from "@/Components/Layouts/Index.vue";
+    import { computed, onMounted } from "vue";
 
-import { useLayoutStore } from "@/store/layout";
-import { setAttribute } from "@/Pages/utils";
+    import { useLayoutStore } from "@/store/layout";
+    import { setAttribute } from "@/Pages/utils";
 
-const currentYear = computed(() => new Date().getFullYear());
-const layoutStore = computed(() => useLayoutStore());
+    const currentYear = computed(() => new Date().getFullYear());
+    const layoutStore = computed(() => useLayoutStore());
 
-onMounted(() => {
-    const {
-        mode,
-        layoutType,
-        layoutWidth,
-        topBarColor,
-        sideBarSize,
-        sideBarColor,
-        dir,
-        skinLayout,
-        navType
-    } = layoutStore.value;
+    onMounted(() => {
+        const {
+            mode,
+            layoutType,
+            layoutWidth,
+            topBarColor,
+            sideBarSize,
+            sideBarColor,
+            dir,
+            skinLayout,
+            navType
+        } = layoutStore.value;
 
-    setAttribute("data-mode", mode);
-    setAttribute("data-topbar", topBarColor);
-    setAttribute("data-sidebar", sideBarColor);
-    setAttribute("data-layout", layoutType);
-    setAttribute("data-skin", skinLayout);
-    setAttribute("dir", dir);
-    setAttribute("data-content", layoutWidth);
-    setAttribute("data-sidebar-size", sideBarSize);
-    setAttribute("data-navbar", navType);
-})
+        setAttribute("data-mode", mode);
+        setAttribute("data-topbar", topBarColor);
+        setAttribute("data-sidebar", sideBarColor);
+        setAttribute("data-layout", layoutType);
+        setAttribute("data-skin", skinLayout);
+        setAttribute("dir", dir);
+        setAttribute("data-content", layoutWidth);
+        setAttribute("data-sidebar-size", sideBarSize);
+        setAttribute("data-navbar", navType);
+    })
 </script>
 
 <template>

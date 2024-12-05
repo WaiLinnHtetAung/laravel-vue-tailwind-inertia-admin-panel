@@ -40,6 +40,9 @@ class HandleInertiaRequests extends Middleware
                 'location' => $request->url(),
             ],
             'current_path' => parse_url($request->url(), PHP_URL_PATH),
+            'flash' => [
+                'success' => fn() => $request->session()->get('success'),
+            ]
         ];
     }
 }

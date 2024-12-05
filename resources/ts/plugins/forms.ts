@@ -1,16 +1,16 @@
-const plugin = require("tailwindcss/plugin");
+import plugin from "tailwindcss/plugin";
 
 module.exports = plugin(function ({ addComponents, theme }) {
   addComponents({
     '[type="checkbox"]:checked': {
       "@apply bg-no-repeat": {},
-      backgroundImage: 'url("../images/check-arrow.svg")',
+      backgroundImage: 'url("@/assets/images/check-arrow.svg")',
       backgroundSize: ".9rem .9rem",
       backgroundPosition: "50%"
     },
     '[type="radio"]:checked': {
       "@apply bg-no-repeat": {},
-      backgroundImage: 'url("../images/radio-arrow.svg")',
+      backgroundImage: 'url("@/assets/images/radio-arrow.svg")',
       backgroundSize: ".75rem .75rem",
       backgroundPosition: "58%"
     },
