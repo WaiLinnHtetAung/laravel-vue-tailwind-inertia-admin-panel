@@ -1,10 +1,9 @@
-import avatar1 from "@/assets/images/user1.jpg";
-import avatar2 from "@/assets/images/user2.jpg";
 
 import {
     MonitorDot,
     Server,
-    UserCog
+    UserCog,
+    Package
   } from "lucide-vue-next";
 
   export const menuItems: any[] = [
@@ -21,6 +20,15 @@ import {
         { path: "/user-management/users", title: "Users" },
       ]
     },
+
+    { isHeader: true, title: "Pages" },
+    {
+        title: "Product Management",
+        icon: Package,
+        subMenu: [
+          { path: "/product-management/brands", title: "Brands" },
+        ]
+    }
 
 
     // {

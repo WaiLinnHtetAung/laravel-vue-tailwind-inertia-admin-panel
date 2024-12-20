@@ -16,6 +16,7 @@ import TModal from "@/Components/Modal.vue";
 import TInputField from "@/Components/FormFields/InputField.vue";
 import TSwitch from "@/Components/FormFields/Switch.vue"
 import TAlert from "@/Components/Alert.vue";
+import TFileUploader from "@/Components/FormFields/FileUpload.vue";
 
 export const initGlobalComponent = (app: App) => {
     app.component('TMenu', TMenu);
@@ -35,4 +36,5 @@ export const initGlobalComponent = (app: App) => {
     app.component('TInputField', TInputField);
     app.component('TSwitch', TSwitch);
     app.component('TAlert', TAlert);
+    app.component('TFileUploader', TFileUploader);
 }
